@@ -1,0 +1,298 @@
+a11[0]: 1
+a11[1]: 2
+a11[2]: 3
+
+a12[0]: 1
+a12[1]: 2
+a12[2]: 3
+
+a13[0]: 1
+a13[1]: 2
+a13[2]: 3
+
+a14[0]: 1
+a14[1]: 2
+a14[2]: 3
+
+a15[0]: 1
+a15[1]: 2
+a15[2]: 3
+
+a31[0]: 1
+a31[1]: 2
+a31[2]: 3
+
+a32[0]: 1
+a32[1]: 2
+a32[2]: 3
+
+a41[0]: 1
+a41[1]: 2
+a41[2]: 3
+
+a42[0]: 1
+a42[1]: 2
+a42[2]: 3
+
+a43[0]: 1
+a43[1]: 2
+a43[2]: 3
+
+a51[0]: 1
+a51[1]: 2
+a51[2]: 3
+
+a52[0]: 1
+a52[1]: 2
+a52[2]: 3
+
+a53[0]: 1
+a53[1]: 2
+a53[2]: 3
+
+a54[0]: 1
+a54[1]: 2
+a54[2]: 3
+
+a61[0]: 1
+a61[1]: 2
+a61[2]: 3
+
+a62[0]: 1
+a62[1]: 2
+a62[2]: 3
+
+a63[0]: 1
+a63[1]: 2
+a63[2]: 3
+
+a64[0]: 1
+a64[1]: 2
+a64[2]: 3
+
+b12[0]: 1
+b12[1]: 2
+b12[2]: 3
+
+b31[0]: 1
+b31[1]: 2
+b31[2]: 3
+
+b32[0]: 1
+b32[1]: 2
+b32[2]: 3
+
+c12[0]: 513
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(377,14): Check failed: c12[0] == 1
+c12[1]: 3
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(379,14): Check failed: c12[1] == 2
+c12[2]: 0
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(381,14): Check failed: c12[2] == 3
+
+c13[0]: 1
+c13[1]: 2
+c13[2]: 3
+
+c31[0]: 513
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(393,14): Check failed: c31[0] == 1
+c31[1]: 259
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(395,14): Check failed: c31[1] == 2
+c31[2]: 770
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(397,14): Check failed: c31[2] == 3
+
+c32[0]: 513
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(401,14): Check failed: c32[0] == 1
+c32[1]: 259
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(403,14): Check failed: c32[1] == 2
+c32[2]: 770
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(405,14): Check failed: c32[2] == 3
+
+c41[0]: 1
+c41[1]: 2
+c41[2]: 3
+
+c42[0]: 1
+c42[1]: 2
+c42[2]: 3
+
+c43[0]: 1
+c43[1]: 2
+c43[2]: 3
+
+d12[0]: 16974337
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(435,14): Check failed: d12[0] == 1
+d12[1]: 33620738
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(437,14): Check failed: d12[1] == 2
+d12[2]: 50462979
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(439,14): Check failed: d12[2] == 3
+
+d13[0]: 131073
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(443,14): Check failed: d13[0] == 1
+d13[1]: 33619971
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(445,14): Check failed: d13[1] == 2
+d13[2]: 50462979
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(447,14): Check failed: d13[2] == 3
+
+d14[0]: 1
+d14[1]: 2
+d14[2]: 3
+
+d31[0]: 16974337
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(460,14): Check failed: d31[0] == 1
+d31[1]: 50332160
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(462,14): Check failed: d31[1] == 2
+d31[2]: 50462976
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(464,14): Check failed: d31[2] == 3
+
+d32[0]: 16974337
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(468,14): Check failed: d32[0] == 1
+d32[1]: 66306
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(470,14): Check failed: d32[1] == 2
+d32[2]: 196610
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(472,14): Check failed: d32[2] == 3
+
+d41[0]: 131073
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(477,14): Check failed: d41[0] == 1
+d41[1]: 33619971
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(479,14): Check failed: d41[1] == 2
+d41[2]: 50462979
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(481,14): Check failed: d41[2] == 3
+
+d42[0]: 131073
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(485,14): Check failed: d42[0] == 1
+d42[1]: 65539
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(487,14): Check failed: d42[1] == 2
+d42[2]: 196610
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(489,14): Check failed: d42[2] == 3
+
+d43[0]: 131073
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(493,14): Check failed: d43[0] == 1
+d43[1]: 65539
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(495,14): Check failed: d43[1] == 2
+d43[2]: 196610
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(497,14): Check failed: d43[2] == 3
+
+d51[0]: 1
+d51[1]: 2
+d51[2]: 3
+
+d52[0]: 1
+d52[1]: 2
+d52[2]: 3
+
+d53[0]: 1
+d53[1]: 2
+d53[2]: 3
+
+d54[0]: 1
+d54[1]: 2
+d54[2]: 3
+
+e11[0]: 1
+e11[1]: 2
+e11[2]: 3
+
+e12[0]: 216174981154013697
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(543,14): Check failed: e12[0] == 1
+e12[1]: 72060892606365952
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(545,14): Check failed: e12[1] == 2
+e12[2]: 216736831629165056
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(547,14): Check failed: e12[2] == 3
+
+e13[0]: 72057606922960897
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(551,14): Check failed: e13[0] == 1
+e13[1]: 844433520132866
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(553,14): Check failed: e13[1] == 2
+e13[2]: 281487861743617
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(555,14): Check failed: e13[2] == 3
+
+e14[0]: 8589934593
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(559,14): Check failed: e14[0] == 1
+e14[1]: 4294967299
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(561,14): Check failed: e14[1] == 2
+e14[2]: 8589934592
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(563,14): Check failed: e14[2] == 3
+
+e15[0]: 1
+e15[1]: 2
+e15[2]: 3
+
+e31[0]: 216174981154013697
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(576,14): Check failed: e31[0] == 1
+e31[1]: 144116300506005504
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(578,14): Check failed: e31[1] == 2
+e31[2]: 216174981153817344
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(580,14): Check failed: e31[2] == 3
+
+e32[0]: 284782118502913
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(584,14): Check failed: e32[0] == 1
+e32[1]: 216736831579029506
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(586,14): Check failed: e32[1] == 2
+e32[2]: 281487861743617
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(588,14): Check failed: e32[2] == 3
+
+e41[0]: 144396675937599489
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(593,14): Check failed: e41[0] == 1
+e41[1]: 562954298851587
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(595,14): Check failed: e41[1] == 2
+e41[2]: 284782118305795
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(597,14): Check failed: e41[2] == 3
+
+e42[0]: 281487861743617
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(601,14): Check failed: e42[0] == 1
+e42[1]: 72904222286479362
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(603,14): Check failed: e42[1] == 2
+e42[2]: 844433520132866
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(605,14): Check failed: e42[2] == 3
+
+e43[0]: 281487861743617
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(609,14): Check failed: e43[0] == 1
+e43[1]: 562954248585218
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(611,14): Check failed: e43[1] == 2
+e43[2]: 216736844497354755
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(613,14): Check failed: e43[2] == 3
+
+e51[0]: 8589934593
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(618,14): Check failed: e51[0] == 1
+e51[1]: 4294967299
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(620,14): Check failed: e51[1] == 2
+e51[2]: 12884901890
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(622,14): Check failed: e51[2] == 3
+
+e52[0]: 8589934593
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(626,14): Check failed: e52[0] == 1
+e52[1]: 4294967299
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(628,14): Check failed: e52[1] == 2
+e52[2]: 12884901890
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(630,14): Check failed: e52[2] == 3
+
+e53[0]: 8589934593
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(634,14): Check failed: e53[0] == 1
+e53[1]: 4294967299
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(636,14): Check failed: e53[1] == 2
+e53[2]: 12884901890
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(638,14): Check failed: e53[2] == 3
+
+e54[0]: 8589934593
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(642,14): Check failed: e54[0] == 1
+e54[1]: 4294967299
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(644,14): Check failed: e54[1] == 2
+e54[2]: 12884901890
+Users/johnnovak/dev/jn/nim-lang-bugs/numeric/int.nim(646,14): Check failed: e54[2] == 3
+
+e61[0]: 1
+e61[1]: 2
+e61[2]: 3
+
+e62[0]: 1
+e62[1]: 2
+e62[2]: 3
+
+e63[0]: 1
+e63[1]: 2
+e63[2]: 3
+
+e64[0]: 1
+e64[1]: 2
+e64[2]: 3
+
