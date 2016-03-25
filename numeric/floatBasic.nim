@@ -1,21 +1,24 @@
+# Normal array case
+# =================
 var a: array[3, float32]
 var b: array[3, float64]
 
-#a = [1, 2, 3]                      # does not compile, correct
-#a = [1.0, 2.0, 3.0]                # does not compile, correct
+#a = [1, 2, 3]                      # doesn't compile, but the compiler could figure it out
+#a = [1.0, 2.0, 3.0]                # doesn't compile, but the compiler could figure it out
 a = [1.0'f32, 2.0'f32, 3.0'f32]     # compiles
-#a = [1.0'f64, 2.0'f64, 3.0'f64]    # doesn't compile, correct
+#a = [1.0'f64, 2.0'f64, 3.0'f64]    # doesn't compile, but the compiler could figure it out
 
-#b = [1, 2, 3]                      # does not compile, correct
+#b = [1, 2, 3]                      # doesn't compile, but the compiler could figure it out
 b = [1.0, 2.0, 3.0]                 # compiles
-#b = [1.0'f32, 2.0'f32, 3.0'f32]    # does not compile, correct
-b = [1.0'f64, 2.0'f64, 3.0'f64]     # compiles
+#b = [1.0'f32, 2.0'f32, 3.0'f32]    # doesn't compile, but the compiler could figure it out
+b = [1.0'f64, 2.0'f64, 3.0'f64]     # doesn't compile, but the compiler could figure it out
 
 # a = b     # does not compile, correct
             # copying a float64 array into a float32 array is forbidden
 
 
-# ...but if it's a typedef
+# Typedef'd array case
+# ====================
 type Vec3[T] = array[3, T]
 
 var va: Vec3[float32] = Vec3([1.0'f32, 2.0'f32, 3.0'f32])
@@ -39,15 +42,14 @@ echo "va[1]: " & $va[1]  # prints 1.875  INCORRECT
 echo "va[2]: " & $va[2]  # prints 0.0    INCORRECT
 echo ""
 
-
-# Interestingly, this works fine:
+# Interestingly, this works fine, but I think it should not compile:
 var vc: Vec3[float32] = Vec3([1.0'f64, 2.0'f64, 3.0'f64])
 echo "vc[0]: " & $vc[0]  # prints 1.0    OK
 echo "vc[1]: " & $vc[1]  # prints 2.0    OK
 echo "vc[2]: " & $vc[2]  # prints 3.0    OK
 echo ""
 
-# And this too:
+# And this too, but this shouldn't compile either:
 var vd: Vec3[float32] = Vec3[float64]([1.0'f64, 2.0'f64, 3.0'f64])
 echo "vd[0]: " & $vd[0]  # prints 1.0    OK
 echo "vd[1]: " & $vd[1]  # prints 2.0    OK
@@ -67,7 +69,7 @@ echo ""
 #var ve = Vec3[float32]([1.0, 2.0, 3.0]) 
 
 # Yet assigning a Vec3[float32] to a Vec3[float64] var _is_ allowed and
-# gives incorrect results!
+# gives incorrect results! See below:
 var vg: Vec3[float32] = Vec3([1.0, 2.0, 3.0])
 
 echo "vg[0]: " & $vg[0]  # prints 1.0    OK

@@ -7,7 +7,9 @@ proc vec3[T](x: T, y: T, z: T): Vec3[T] =
   Vec3([x, y, z])
 
 var
+  # normal lines without extra comments means the case is correct
   # commented out lines would correctly trigger compile errors
+
   a11 = vec3(1, 2, 3)
   a12 = vec3(1'i8, 2'i8, 3'i8)
   a13 = vec3(1'i16, 2'i16, 3'i16)
@@ -42,7 +44,7 @@ var
   a62 = vec3[int64](1'i8, 2'i8, 3'i8)
   a63 = vec3[int64](1'i16, 2'i16, 3'i16)
   a64 = vec3[int64](1'i32, 2'i32, 3'i32)
-#  a65 = vec3[int32](1'i64, 2'i64, 3'i64)
+  a65 = vec3[int64](1'i64, 2'i64, 3'i64)
 
 
 #  b11: Vec3[int8] = vec3(1, 2, 3)
@@ -83,7 +85,7 @@ var
 
 
 #  c11: Vec3[int16] = vec3(1, 2, 3)
-  c12: Vec3[int16] = vec3(1'i8, 2'i8, 3'i8)             # compiles but gives wrong results
+  c12: Vec3[int16] = vec3(1'i8, 2'i8, 3'i8)   # should not compile but does and gives incorrect results
   c13: Vec3[int16] = vec3(1'i16, 2'i16, 3'i16)
 #  c14: Vec3[int16] = vec3(1'i32, 2'i32, 3'i32)
 #  c15: Vec3[int16] = vec3(1'i64, 2'i64, 3'i64)
@@ -94,8 +96,8 @@ var
 #  c24: Vec3[int16] = vec3[int](1'i32, 2'i32, 3'i32)
 #  c25: Vec3[int16] = vec3[int](1'i64, 2'i64, 3'i64)
 
-  c31: Vec3[int16] = vec3[int8](1, 2, 3)
-  c32: Vec3[int16] = vec3[int8](1'i8, 2'i8, 3'i8)
+  c31: Vec3[int16] = vec3[int8](1, 2, 3)   # should not compile but does and gives incorrect results
+  c32: Vec3[int16] = vec3[int8](1'i8, 2'i8, 3'i8)   # should not compile but does and gives incorrect results
 #  c33: Vec3[int16] = vec3[int8](1'i16, 2'i16, 3'i16)
 #  c34: Vec3[int16] = vec3[int8](1'i32, 2'i32, 3'i32)
 #  c35: Vec3[int16] = vec3[int8](1'i64, 2'i64, 3'i64)
@@ -120,12 +122,9 @@ var
 
 
 #  d11: Vec3[int32] = vec3(1, 2, 3)
-  d12: Vec3[int32] = vec3(1'i8, 2'i8, 3'i8)             # compiles but gives wrong results
-
-  d13: Vec3[int32] = vec3(1'i16, 2'i16, 3'i16)          # compiles but gives wrong results
-
-  d14: Vec3[int32] = vec3(1'i32, 2'i32, 3'i32)          # compiles but gives wrong results
-
+  d12: Vec3[int32] = vec3(1'i8, 2'i8, 3'i8)   # should not compile but does and gives incorrect results
+  d13: Vec3[int32] = vec3(1'i16, 2'i16, 3'i16)   # should not compile but does and gives incorrect results
+  d14: Vec3[int32] = vec3(1'i32, 2'i32, 3'i32)
 #  d15: Vec3[int32] = vec3(1'i64, 2'i64, 3'i64)
 
 #  d21: Vec3[int32] = vec3[int](1, 2, 3)
@@ -134,17 +133,15 @@ var
 #  d24: Vec3[int32] = vec3[int](1'i32, 2'i32, 3'i32)
 #  d25: Vec3[int32] = vec3[int](1'i64, 2'i64, 3'i64)
 
-  d31: Vec3[int32] = vec3[int8](1, 2, 3)                # compiles but gives wrong results
-
-  d32: Vec3[int32] = vec3[int8](1'i8, 2'i8, 3'i8)       # compiles but gives wrong results
-
+  d31: Vec3[int32] = vec3[int8](1, 2, 3)   # should not compile but does and gives incorrect results
+  d32: Vec3[int32] = vec3[int8](1'i8, 2'i8, 3'i8)   # should not compile but does and gives incorrect results
 #  d33: Vec3[int32] = vec3[int8](1'i16, 2'i16, 3'i16)
 #  d34: Vec3[int32] = vec3[int8](1'i32, 2'i32, 3'i32)
 #  d35: Vec3[int32] = vec3[int8](1'i64, 2'i64, 3'i64)
 
-  d41: Vec3[int32] = vec3[int16](1, 2, 3)                # compiles but gives wrong results
-  d42: Vec3[int32] = vec3[int16](1'i8, 2'i8, 3'i8)       # compiles but gives wrong results
-  d43: Vec3[int32] = vec3[int16](1'i16, 2'i16, 3'i16)    # compiles but gives wrong results
+  d41: Vec3[int32] = vec3[int16](1, 2, 3)   # should not compile but does and gives incorrect results
+  d42: Vec3[int32] = vec3[int16](1'i8, 2'i8, 3'i8)   # should not compile but does and gives incorrect results
+  d43: Vec3[int32] = vec3[int16](1'i16, 2'i16, 3'i16)   # should not compile but does and gives incorrect results
 #  d44: Vec3[int32] = vec3[int16](1'i32, 2'i32, 3'i32)
 #  d45: Vec3[int32] = vec3[int16](1'i64, 2'i64, 3'i64)
 
@@ -162,9 +159,9 @@ var
 
 
   e11: Vec3[int64] = vec3(1, 2, 3)
-  e12: Vec3[int64] = vec3(1'i8, 2'i8, 3'i8)
-  e13: Vec3[int64] = vec3(1'i16, 2'i16, 3'i16)
-  e14: Vec3[int64] = vec3(1'i32, 2'i32, 3'i32)
+  e12: Vec3[int64] = vec3(1'i8, 2'i8, 3'i8)   # should not compile but does and gives incorrect results
+  e13: Vec3[int64] = vec3(1'i16, 2'i16, 3'i16)   # should not compile but does and gives incorrect results
+  e14: Vec3[int64] = vec3(1'i32, 2'i32, 3'i32)   # should not compile but does and gives incorrect results
   e15: Vec3[int64] = vec3(1'i64, 2'i64, 3'i64)
 
 #  e21: Vec3[int64] = vec3[int](1, 2, 3)
@@ -173,22 +170,22 @@ var
 #  e24: Vec3[int64] = vec3[int](1'i32, 2'i32, 3'i32)
 #  e25: Vec3[int64] = vec3[int](1'i64, 2'i64, 3'i64)
 
-  e31: Vec3[int64] = vec3[int8](1, 2, 3)
-  e32: Vec3[int64] = vec3[int8](1'i8, 2'i8, 3'i8)
+  e31: Vec3[int64] = vec3[int8](1, 2, 3)   # should not compile but does and gives incorrect results
+  e32: Vec3[int64] = vec3[int8](1'i8, 2'i8, 3'i8)   # should not compile but does and gives incorrect results
 #  e33: Vec3[int64] = vec3[int8](1'i16, 2'i16, 3'i16)
 #  e34: Vec3[int64] = vec3[int8](1'i32, 2'i32, 3'i32)
 #  e35: Vec3[int64] = vec3[int8](1'i64, 2'i64, 3'i64)
 
-  e41: Vec3[int64] = vec3[int16](1, 2, 3)
-  e42: Vec3[int64] = vec3[int16](1'i8, 2'i8, 3'i8)
-  e43: Vec3[int64] = vec3[int16](1'i16, 2'i16, 3'i16)
+  e41: Vec3[int64] = vec3[int16](1, 2, 3)   # should not compile but does and gives incorrect results
+  e42: Vec3[int64] = vec3[int16](1'i8, 2'i8, 3'i8)   # should not compile but does and gives incorrect results
+  e43: Vec3[int64] = vec3[int16](1'i16, 2'i16, 3'i16)   # should not compile but does and gives incorrect results
 #  e44: Vec3[int64] = vec3[int16](1'i32, 2'i32, 3'i32)
 #  e45: Vec3[int64] = vec3[int16](1'i64, 2'i64, 3'i64)
 
-  e51: Vec3[int64] = vec3[int32](1, 2, 3)
-  e52: Vec3[int64] = vec3[int32](1'i8, 2'i8, 3'i8)
-  e53: Vec3[int64] = vec3[int32](1'i16, 2'i16, 3'i16)
-  e54: Vec3[int64] = vec3[int32](1'i32, 2'i32, 3'i32)
+  e51: Vec3[int64] = vec3[int32](1, 2, 3)   # should not compile but does and gives incorrect results
+  e52: Vec3[int64] = vec3[int32](1'i8, 2'i8, 3'i8)   # should not compile but does and gives incorrect results
+  e53: Vec3[int64] = vec3[int32](1'i16, 2'i16, 3'i16)   # should not compile but does and gives incorrect results
+  e54: Vec3[int64] = vec3[int32](1'i32, 2'i32, 3'i32)   # should not compile but does and gives incorrect results
 #  e55: Vec3[int64] = vec3[int32](1'i64, 2'i64, 3'i64)
 
   e61: Vec3[int64] = vec3[int64](1, 2, 3)
@@ -345,6 +342,14 @@ echo  "a64[1]: " & $a64[1]
 check (a64[1] == 2)
 echo  "a64[2]: " & $a64[2]
 check (a64[2] == 3)
+echo ""
+
+echo  "a65[0]: " & $a65[0]
+check (a65[0] == 1)
+echo  "a65[1]: " & $a65[1]
+check (a65[1] == 2)
+echo  "a65[2]: " & $a65[2]
+check (a65[2] == 3)
 echo ""
 
 

@@ -7,6 +7,9 @@ proc vec3[T](x: T, y: T, z: T): Vec3[T] =
   Vec3([x, y, z])
 
 var
+  # normal lines without extra comments means the case is correct
+  # commented out lines would correctly trigger compile errors
+
   a1 = vec3(1.0, 2.0, 3.0)
   b1 = vec3(1.0'f32, 2.0'f32, 3.0'f32)
   c1 = vec3(1.0'f64, 2.0'f64, 3.0'f64)
@@ -17,7 +20,7 @@ var
 
   g1 = vec3[float32](1.0, 2.0, 3.0)
   h1 = vec3[float32](1.0'f32, 2.0'f32, 3.0'f32)
-  i1 = vec3[float32](1.0'f64, 2.0'f64, 3.0'f64)
+  i1 = vec3[float32](1.0'f64, 2.0'f64, 3.0'f64)     # should not compile
 
   j1 = vec3[float64](1.0, 2.0, 3.0)
   k1 = vec3[float64](1.0'f32, 2.0'f32, 3.0'f32)
@@ -41,9 +44,9 @@ var
 #  l2: Vec3[float] = vec3[float64](1.0'f64, 2.0'f64, 3.0'f64)
 
 
-  a3: Vec3[float32] = vec3(1.0, 2.0, 3.0)
+  a3: Vec3[float32] = vec3(1.0, 2.0, 3.0)   # should not compile but does and gives incorrect results
   b3: Vec3[float32] = vec3(1.0'f32, 2.0'f32, 3.0'f32)
-  c3: Vec3[float32] = vec3(1.0'f64, 2.0'f64, 3.0'f64)
+  c3: Vec3[float32] = vec3(1.0'f64, 2.0'f64, 3.0'f64)   # should not compile but does and gives incorrect results
 
 #  d3: Vec3[float32] = vec3[float](1.0, 2.0, 3.0)
 #  e3: Vec3[float32] = vec3[float](1.0'f32, 2.0'f32, 3.0'f32)
@@ -51,24 +54,24 @@ var
 
   g3: Vec3[float32] = vec3[float32](1.0, 2.0, 3.0)
   h3: Vec3[float32] = vec3[float32](1.0'f32, 2.0'f32, 3.0'f32)
-  i3: Vec3[float32] = vec3[float32](1.0'f64, 2.0'f64, 3.0'f64)
+  i3: Vec3[float32] = vec3[float32](1.0'f64, 2.0'f64, 3.0'f64)  # should not compile
 
-  j3: Vec3[float32] = vec3[float64](1.0, 2.0, 3.0)
-  k3: Vec3[float32] = vec3[float64](1.0'f32, 2.0'f32, 3.0'f32)
-  l3: Vec3[float32] = vec3[float64](1.0'f64, 2.0'f64, 3.0'f64)
+  j3: Vec3[float32] = vec3[float64](1.0, 2.0, 3.0)    # should not compile but does and gives incorrect results
+  k3: Vec3[float32] = vec3[float64](1.0'f32, 2.0'f32, 3.0'f32)  # should not compile
+  l3: Vec3[float32] = vec3[float64](1.0'f64, 2.0'f64, 3.0'f64)  # should not compile but does and gives incorrect results
 
 
   a4: Vec3[float64] = vec3(1.0, 2.0, 3.0)
-  b4: Vec3[float64] = vec3(1.0'f32, 2.0'f32, 3.0'f32)
+  b4: Vec3[float64] = vec3(1.0'f32, 2.0'f32, 3.0'f32)   # should not compile but does and gives incorrect results
   c4: Vec3[float64] = vec3(1.0'f64, 2.0'f64, 3.0'f64)
 
 #  d4: Vec3[float64] = vec3[float](1.0, 2.0, 3.0)
 #  e4: Vec3[float64] = vec3[float](1.0'f32, 2.0'f32, 3.0'f32)
 #  f4: Vec3[float64] = vec3[float](1.0'f64, 2.0'f64, 3.0'f64)
 
-  g4: Vec3[float64] = vec3[float32](1.0, 2.0, 3.0)
-  h4: Vec3[float64] = vec3[float32](1.0'f32, 2.0'f32, 3.0'f32)
-  i4: Vec3[float64] = vec3[float32](1.0'f64, 2.0'f64, 3.0'f64)
+  g4: Vec3[float64] = vec3[float32](1.0, 2.0, 3.0)   # should not compile but does and gives incorrect results
+  h4: Vec3[float64] = vec3[float32](1.0'f32, 2.0'f32, 3.0'f32)   # should not compile but does and gives incorrect results
+  i4: Vec3[float64] = vec3[float32](1.0'f64, 2.0'f64, 3.0'f64)   # should not compile but does and gives incorrect results
 
   j4: Vec3[float64] = vec3[float64](1.0, 2.0, 3.0)
   k4: Vec3[float64] = vec3[float64](1.0'f32, 2.0'f32, 3.0'f32)
