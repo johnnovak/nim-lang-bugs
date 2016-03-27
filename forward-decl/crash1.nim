@@ -3,7 +3,7 @@
 proc boo(p: proc)
 
 proc quux(p: proc) =
-  boo()
+  discard
 
 proc boo(p: proc) =
   discard

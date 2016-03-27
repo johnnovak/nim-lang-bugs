@@ -7,7 +7,7 @@ proc boo(p: proc) =
   discard
 
 proc quux(p: proc) =
-  boo()
+  discard
 
 # Compiler CRASH!
 #
