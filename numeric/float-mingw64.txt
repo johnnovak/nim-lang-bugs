@@ -1,4 +1,5 @@
-CC: stdlib_system
+nim 0.13.0, 64-bit, MinGW64 on Windows
+
 a1[0]: 1.0
 a1[1]: 2.0
 a1[2]: 3.0
